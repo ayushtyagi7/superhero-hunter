@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+body{
+    margin:0;
+    background-image: linear-gradient(90deg, black, beige,black);
+    height: 100vh;
+    width:100%;
+    font-weight: 100;
+    font-family: 'Balsamiq Sans';
+}
+#main{
+    width:100%;
+    height:auto;
+    box-sizing: border-box;
+    padding:10px;
+    text-align: center;
+}
+#pic{
+    width:400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 50rem;
+    overflow: hidden;
+    box-shadow: 0 0 26px 3px black;
+}
+img{
+    width:100%;
+}
+#name{
+    margin: 20px;
+    background-color: black;
+    color:beige;
+    padding: 5px;
+}
+#powerstats{
+    width:100%;
+    height:auto;
+    box-sizing: border-box;
+    padding:10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#powerstats>div{
+    width:350px;
+    height:50px;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: -3px -3px 10px -2px black inset;
+}
+@media screen and (max-width:778px){
+    #pic{
+        width:250px;
+        height:250px;
+    }
+    #powerstats>div{
+     width:200px;
+     height:40px;
+    
+    }
+}
+.common{
+    background-color: grey;
+    position: absolute;
+    left:0;
+    height: 100%;
+    box-shadow: 0 0 9px -1px black;
+    width:0%;
+    transition: all 2s ease-in-out;
+}
+.s-name{
+    position: absolute;
+    left:0;
+    z-index: 2;
+}
+.combat{
+    background-color: #ef6d9a;
+}
+.durability{
+    background-color: #f58f87;
+}
+.power{
+    background-color: #FF9800;
+}
+.speed{
+    background-color: #60c560;
+}
+.strength{
+    background-color: #077fde;
+}
+#appearance{
+    text-align: center;
+    margin: 20px;
+}
+h1{
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+    color:beige;
+}
+#home{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: beige;
+    font-size: 45px;
+}

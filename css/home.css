@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+body{
+    margin:0;
+    background-color: black;
+    font-family: 'Balsamiq Sans';
+    height:100vh;
+    width:100%;
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    height:50px;
+    align-items: center;
+    padding: 20px;
+    color:gray;
+    font-size:40px;
+}
+#nav>div{
+background-color: black;
+border-radius: 3rem;
+padding: 3.5px;
+box-shadow: 1px 5px 10px -2px white;
+}
+input{
+    width:210px;
+    height: 57px;
+    border-radius: 4rem;
+    background-color: black;
+    text-align: center;
+    color:gray;
+    font-size: 32px;
+}
+input:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+    color:gray;
+}
+#nav div{
+    width:auto;
+    height: auto;
+}
+#cards{
+    height:auto;
+    width:100%;
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+  
+}
+#cards>div{
+    height:330px;
+    width:250px;
+    margin: 30px;
+    position: relative;
+    box-shadow: 0 0 28px -1px black;  
+    transition: all 0.2s;
+    overflow: hidden;
+}
+#cards>div:hover{
+    height: 340px;
+    width:255px;
+    box-shadow: 0 0 28px -1px beige;
+}
+.card img{
+    width:100%;
+}
+.cardName{
+    background-color: gray;
+    height: 10%;
+    position: absolute;
+    color: white;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home{
+    display: flex;
+    margin-top: 80px;
+     transform-style: preserve-3d;
+     perspective: 1000px;
+}
+
+#home>div{
+ width: 50%;
+    height:auto;
+   
+}
+
+.cube{
+    margin:auto;
+    margin-top:50px;
+    height:300px;
+    width:300px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transform-style:preserve-3d;
+    animation: change 10s linear infinite;
+}
+.cube>div{
+    height:300px;
+    width:300px;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.one{
+    background-image: url('../images/1.jpg');
+    transform: translateZ(150px);
+}
+.two{
+    background-image:url('../images/2.jpg');
+    transform: translateZ(-150px);
+}
+  .three{
+    background-image:url('../images/3.jpg');
+    transform:rotateY(90deg) translateZ(150px) ;
+}
+  .four{
+    background-image:url('../images/4.jpg');
+    transform: rotateY(-90deg) translateZ(150px);
+}
+.five{
+    background-image:url('../images/5.jpg');
+    transform: rotateX(90deg) translateZ(150px);
+}
+.six{
+    background-image:url('../images/6.jpg');
+    transform: rotateX(-90deg) translateZ(150px);
+}   
+@keyframes change{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateX(-360deg) rotateY(-360deg);
+    }
+}
+
+@media screen and (max-width:780px){
+  
+    #home {
+        display: block;
+    }
+    #home>div{
+        width:100%;
+    }
+    #nav{
+        font-size:20px;
+    }
+    
+    .cube{
+        height:400px;
+        width:400px;
+    }
+    .cube>div{
+        height:200px;
+        width:200px;
+    }
+    .fav{
+    position: absolute;
+    top:60px;
+    }.home{
+    position: absolute;
+    top:20px;
+    }
+    #search{
+    position: absolute;
+    right:30px;
+    top:30px;
+    }
+    #cards>div{
+        height: 235px;
+        width: 160px;
+    }
+    #cards>div:hover{
+        height: 266px;
+        width: 180px;
+    }
+
+ .one{
+    background-image: url('../images/1.jpg');
+    transform: translateZ(100px);
+}
+.two{
+    background-image:url('../images/2.jpg');
+    transform: translateZ(-100px);
+}
+  .three{
+    background-image:url('../images/3.jpg');
+    transform:rotateY(90deg) translateZ(100px) ;
+}
+  .four{
+    background-image:url('../images/4.jpg');
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.five{
+    background-image:url('../images/5.jpg');
+    transform: rotateX(90deg) translateZ(100px);
+}
+.six{
+    background-image:url('../images/6.jpg');
+    transform: rotateX(-90deg) translateZ(100px);
+}   
+     
+}
+
+.favSign{
+    position: absolute;
+    top:-5px;
+    left:-5px;
+    background-color: black;
+    color:red;
+    cursor: pointer;
+}
+#notification{
+    position: fixed;
+    top:20px;
+    right:20px;
+    background-color: greenyellow;
+    padding:10px;
+    color:black;
+    opacity: 0;
+    transition: all 2s;
+    border-radius: 10px;
+}
